@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  
+    <%- include("link") %>
+
+<body>
+      
+        <div class="modal-dialog" role="document">
+
+
+    <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">EDIT PRODUCT</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+
+
+
+            <form action="/edit_product" method="POST">
+
+
+              <% for(let data of get_product_data){%>
+                <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="product id" value=<%=data._id%> name="id_pro" required>
+                </div>
+              </div><br>
+            
+            
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="product name" value=<%=data.Product_name%> name="name_pro">
+                </div>
+                </div><br>
+                <div class="row">
+                <div class="col">
+                    <label><b>added on</b></label>
+                  <input  type="date" class="form-control" placeholder="added on" value=<%=data.Added_on%> name="addedOn">
+                  
+                </div>
+              </div><br>
+            
+            
+              
+              <div class="row">
+                <div class="col">
+                  <select  class="form-control" placeholder="Location" name="location">
+                      
+                      
+                    <option>select location</option>
+                    <option>delhi</option>
+                    <option>rajasthan</option>
+                    <option>bangluru</option>
+                    <option>uttrakhand</option>
+                    </select>
+                </div>
+              </div><br>
+            
+              <%}%>
+              <div class="row">
+                <div class="col">
+                  <select  class="form-control" placeholder="customer id" name="cat_id_pro">
+                      
+                      
+                    <option >select customer id</option>
+                    <% for(let data of parent_cutomer_id){%>
+                      <option><%=data.customer_id%></option>
+                      <%}%>
+            </select>
+                </div>
+              </div><br>
+                
+              <div class="row">
+                <div class="col">
+                  <select  class="form-control" placeholder="sub category" name="category_pro">
+                      
+                      
+                    <option >select category</option>
+                    <% for(let data of parent_category_data){%>
+                      <option><%=data%></option>
+                      <%}%>
+            </select>
+                </div>
+              </div><br>
+              
+            
+            
+                
+            <div class="modal-footer">
+            <div class="form-group col-md-4"></div>
+            <div class="form-group col-md-8">  
+            <input class="btn btn-primary button" type="submit" value="Submit">
+            <input class="btn btn-primary" type="reset" value="Reset">  
+            </div>
+            </div>
+            
+            </form>      </div>
+</div>    
+    
+    
+    </body>
+</html>
+
+
+
+
+<!---------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------------------>
+
+
+
+
+
+
+
+

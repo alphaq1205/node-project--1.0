@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <%- include("link") %>
+<body>
+	<div class="container-fluid">
+    	<div class="row"> 
+                  <%- include("sidebar") %>
+    <div class="col-10 dashboard_right">
+            	<div class="add_Member"><h2>Product Listing</h2></div>
+                <div class="dashboard_padding">
+            	<div class="users">
+                	<div class="filter_box">
+                    <div class="row">
+                     
+                        <form method="POST" action="/product_filter">
+                          <div class="col-9"><input type=text name=filter class="form-control" placeholder="Search Your Keyword Here"></div>
+                          <button class="btn btn-secondary">search</button>
+                          <br>
+                          <br>
+                        </form>
+                  
+
+                      <div class="col-2"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        <a href="/logout">LOG OUT</a>
+                      </button></div>                
+					 
+                    
+                     </div>
+                     </div>
+                </div>
+                <form action="/product_table" method="POST">
+            		<table class="table table-bordered">
+                      <thead>
+                          <tr>
+                              
+                              <th scope="col">Product_name</th>
+                              <th scope="col">Parent_category</th>
+                              <th scope="col">Added_by</th>
+                              <th scope="col">Location</th>
+                              <th scope="col">Added_on</th>
+                              <th scope="col">edit</th>
+                              <th scope="col">delete</th>
+                            </tr>
+                                              </thead>
+                      <tbody>
+                        <tr>
+                            <% for(let data of product_data){%>
+                              <tr>
+                                
+                                <td><%=data.Product_name%></td>
+                                <td><%=data.Parent_category%></td>
+                                <td><%=data.Added_by%></td>
+                                <td><%=data.Location%></td>
+                                <td><%=data.Added_on%></td>
+                                <td><button class="edit" name="edit_pro" value=<%=data._id%>>edit</button></br></td>
+                              </form>
+                              <form method="POST" action="/delete_product_data">
+                                <td><button class="delete" name="delete_product" value=<%=data._id%>>delete</button></td>
+                              </form>
+                            </tr>
+                            <%}%>
+                      </tbody>
+                    </table>
+                  </form>
+            	</div>
+            </div>
+         </div> 
+    </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            
+                          </div>
+                        </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+
+
+
+
+
+  <!DOCTYPE html>
+<html>
+  
+    <%- include("link") %>
+
+<body>
+    <!-----<%- include("sidebar") %>---->
+        <div class="modal-dialog" role="document">
+
+
+    <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">EDIT CATEGORY</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+
+
+
+
+           
+                <form action="/edit_category" method="POST">
+
+    <% for(let data of category_edit_data){%>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Category id"  value=<%=data._id%> name="id_cat" >
+      </div>
+    </div><br>
+  
+  
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Category name"  value=<%=data.category%> name="name_cat">
+      </div>
+    </div><br>
+  
+  
+    
+  
+  
+      <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Category discription"  value=<%=data.discription%> name="discription_cat">
+          </div>
+        </div><br>
+  
+  
+  
+        <div class="form-row">
+            <div class="form-control">
+              <label for="inputEmail4">is active</label>
+            </div>
+            <div class="form-group col-md-8">
+            <div class="form-check">
+          <input class="form-check-input" type="radio" name="isActive" id="exampleRadios1" value="yes" checked>
+          <label class="form-check-label" for="exampleRadios1">
+         yes
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="isActive" id="exampleRadios2" value="no">
+          <label class="form-check-label" for="exampleRadios2">
+          no
+          </label>
+        </div>
+
+
+        
+        <div class="row">
+          <div class="col">
+            <input type="date" class="form-control" placeholder="added_on" value=<%=data.added_on%> name="cat_date">
+          </div>
+        </div><br>
+        <%}%>
+        <br>
+  
+  
+        <div class="row">
+            <div class="col">
+              <select  class="form-control" placeholder="parent category" name="parent_cat">
+                  
+                  
+                  <option value="">select parent category</option>
+                  <% for(let data of get_category_data){%>
+                    <option value="<%=data.category%>" ><%=data.category%></option>
+                    <%}%>
+                </select>
+            </div>
+          </div><br>
+        
+            </div>
+          </div>  <br> 
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
+  <div class="modal-footer">
+  <div class="form-group col-md-4"></div>
+  <div class="form-group col-md-8">  
+  <input class="btn btn-primary button" type="submit" value="Submit">
+  <input class="btn btn-primary" type="reset" value="Reset">  
+  </div>
+  </div>
+  
+  </form>
+
+
+
+
+      </div>
+</div>    
+    
+    
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+

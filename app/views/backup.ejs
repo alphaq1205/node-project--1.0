@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+.con{width:100%; max-width:700px;margin:0 auto}
+.sub_heading{margin-top:-25px}
+.sub_heading> h2{ text-align:center;font-size:24px;border-bottom:1px solid #CCC;padding-bottom:15px;margin-bottom:20px}
+.shadoww{width:50%; box-shadow:0 0 15px #999999;margin-top:60px;margin-bottom:60px}
+.user>img{width:15%;margin-top:-40px}
+</style>
+</head>
+
+<body>
+<div class="container_fluid">
+  <div class="container shadoww">
+  <div class="user"><img src="/image/student.png"></div>
+   <div class="sub_heading"><h2>edit customer form</h2>
+   
+   <div class="con">
+<form action="/edit_customer" method="POST">
+
+    <% for(let data of get_customer_data){%>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputName">ID</label>
+            </div>
+            <div class="form-group col-md-8">
+           <input type="text" class="form-control" value=<%=data.customer_id%> name="id_cust">
+            </div>
+          </div>
+  
+
+      <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputName">first_name</label>
+          </div>
+          <div class="form-group col-md-8">
+         <input type="text" class="form-control" value=<%=data.first_name%> name="first_cust">
+          </div>
+        </div>
+
+
+
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputName">last_name</label>
+            </div>
+            <div class="form-group col-md-8">
+           <input type="text" class="form-control" value=<%=data.last_name%> name="last_cust">
+            </div>
+          </div>
+
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputDOB">DOB</label>
+            </div>
+            <div class="form-group col-md-8">
+           <input type="text" class="form-control" placeholder="Enter DOB" value=<%=data.dob%> name="dob_cust">
+            </div>
+          </div>
+          
+
+
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputMobileno">MobileNo</label>
+            </div>
+            <div class="form-group col-md-8">
+           <input type="text" class="form-control" placeholder="Mobile Number" value=<%=data.mobile%> name="phone_cust">
+            </div>
+          </div>
+           
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+               <label for="exampleInputEmail1">EmailID</label>
+            </div>
+            <div class="form-group col-md-8">
+         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value=<%=data.email%> name="email_cust">
+            
+        </div>
+          </div>
+          
+
+
+
+
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputcity">state</label>
+            </div>
+            <div class="form-group col-md-8">
+              <div class="form-group">
+            <select class="form-control" id="exampleFormControlSelect1" name="state">
+              <option>haryana</option>
+              <option>delhi</option>
+              <option>rajasthan</option>
+              <option>bangluru</option>
+              <option>uttrakhand</option>
+            </select>
+          </div>
+            </div>
+          </div>  
+
+
+
+
+
+
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputcity">city</label>
+            </div>
+            <div class="form-group col-md-8">
+              <div class="form-group">
+            <select class="form-control" id="exampleFormControlSelect1" name="city">
+              <option>gurgoan</option>
+              <option>rewari</option>
+              <option>hisar</option>
+              <option>bhiwani</option>
+              <option>rohtak</option>
+            </select>
+          </div>
+            </div>
+          </div>  
+
+
+          <div class="form-row">
+            <div class="form-group col-md-4"></div>
+              <div class="form-group col-md-8">  
+           <input class="btn btn-primary button" type="submit" value="Submit">
+           <input class="btn btn-primary" type="reset" value="Reset">  
+           </div>
+           </div>
+    
+           <%}%>
+  </form>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

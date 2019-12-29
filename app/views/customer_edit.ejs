@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  
+    <%- include("link") %>
+
+<body>
+      
+        <div class="modal-dialog" role="document">
+
+
+    <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">EDIT MEMBER DETAILS</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+
+
+
+
+            <form action="/edit_customer" method="POST">
+              <% for(let data of get_customer_data){%>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="customer id" value=<%=data._id%> name="id_cust">
+                </div>
+              </div><br>
+              
+            
+            
+              <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Name" value=<%=data.customer_name%> name="name_cust">
+                  </div>
+                </div><br>
+            
+          
+            <div class="row">
+              <div class="col">
+                <input type="email" class="form-control" placeholder="EmailID" value=<%=data.email%> name="email_cust">
+              </div>
+            </div><br>
+            
+            
+            <div class="form-row">
+                <div class="form-control">
+                  <label for="inputEmail4">is active</label>
+                </div>
+                <div class="form-group col-md-8">
+                <div class="form-check">
+              <input class="form-check-input" type="radio" name="isActive" id="exampleRadios1" value="avtive" checked>
+              <label class="form-check-label" for="exampleRadios1">
+             yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="isActive" id="exampleRadios2" value="not active">
+              <label class="form-check-label" for="exampleRadios2">
+              no
+              </label>
+            </div>
+                </div>
+              </div>  <br> 
+            
+              
+              <div class="row">
+                  <div class="col">
+                    <input type="date" class="form-control" placeholder="added_on" value=<%=data.added_on%> name="cat_active_date">
+                  </div>
+                </div><br>
+            
+            
+              
+                
+            <div class="modal-footer">
+            <div class="form-group col-md-4"></div>
+            <div class="form-group col-md-8">  
+            <input class="btn btn-primary button" type="submit" value="Submit">
+            <input class="btn btn-primary" type="reset" value="Reset">  
+            </div>
+            </div>
+            <%}%>
+            </form>
+            
+      </div>
+</div>    
+    
+    
+    </body>
+</html>
+
+<!----------------------------------------------------------------------------->
+
+
