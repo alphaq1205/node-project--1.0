@@ -1,15 +1,15 @@
-##What this project is about
+##What this project is about##
 This is a node js  with project mongoDB database in which **Backend** and **Frontend** both are mingle. Through my code you will get a 
 Frontend through which one can manage and manulplate the backend data **( CRUD )**.
 
-##Technologies Used
+##Technologies Used##
 - [NodeJS](https://nodejs.org/en/docs/) (**open source server environment**)
 - [ExpreJS](https://expressjs.com/) (**Fast, unopinionated, minimalist web framework for node**)
 - [MongoDB](https://docs.mongodb.com/) (**Database**)
 - HTML (**Initially frontend pages designed in HTML**)
 - [EJS](https://ejs.co/)  (**.HTML files are converted into .ejs file**)
 
-##Node Package Used (**NPM**)
+##Node Package Used (**NPM**)##
 Before you start coding you have to install some Node Package Modules.
 1. [**Express**](https://www.npmjs.com/package/express)
    - Express is used for create RESTful API's.
