@@ -1,5 +1,5 @@
 ## What this project is about 
-This is a node js  with project mongoDB database in which **Backend** and **Frontend** both are mingle. Through my code you will get a 
+This is a node js project with mongoDB database in which **Backend** and **Frontend** both are mingle. Through my code you will get a 
 Frontend through which one can manage and manulplate the backend data **( CRUD )**.
 
 ## Technologies Used
