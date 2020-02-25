@@ -13,7 +13,7 @@ Frontend through which one can manage and manulplate the backend data **( CRUD )
 Before you start coding you have to install some Node Package Modules.
 1. [**Express**](https://www.npmjs.com/package/express)
    - Express is used for create RESTful API's.
-   - Rendering of pages on particular functionalities.
+   - Rendering of pages with particular functionalities.
 2. [**ejs**](https://www.npmjs.com/package/ejs)
    - ejs file is used in place of html files because it is easy to inject data into HTML template at the client side and produce the final HTML.
    - It also helps to embed JavaScript to HTML pages.
