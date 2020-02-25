@@ -31,5 +31,6 @@ Before you start coding you have to install some Node Package Modules.
    - I use cookie-parser to store a unique-ID through which i am confirming that a user is logged in or logged out.
 7. [multer](https://www.npmjs.com/package/multer)
    - When a web client uploads a file to a server, it is generally submitted through a form and encoded as multipart/form-data. Multer is middleware for Express and Node.js that makes it easy to handle this multipart/form-data when your users upload files.
-   **I think i have completed all the NPM modules which are used in this project. If you want to know how i used these module to execute different functionalaties go through my code**
+   
+**I think i have completed all the NPM modules which are used in this project. If you want to know how i used these module to execute different functionalaties go through my code**
    
