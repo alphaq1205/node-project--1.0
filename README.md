@@ -26,10 +26,10 @@ Before you start coding you have to install some Node Package Modules.
    - sha-256 is used to authenticate the user password which a user enters it at the time of registration
 5. [**mongodb**](https://www.npmjs.com/package/mongodb)
    - If you want to use properties provied in mongoDB you have to install this Node Package.
-6. [cookie-parser](https://www.npmjs.com/package/cookie-parser)
+6. [**cookie-parser**](https://www.npmjs.com/package/cookie-parser)
    - If you want to store any data in cookies with Express, we will require the cookie-parser.
    - I use cookie-parser to store a unique-ID through which i am confirming that a user is logged in or logged out.
-7. [multer](https://www.npmjs.com/package/multer)
+7. [**multer**](https://www.npmjs.com/package/multer)
    - When a web client uploads a file to a server, it is generally submitted through a form and encoded as multipart/form-data. Multer is middleware for Express and Node.js that makes it easy to handle this multipart/form-data when your users upload files.
    
 **I think i have completed all the NPM modules which are used in this project. If you want to know how i used these module to execute different functionalaties go through my code**
